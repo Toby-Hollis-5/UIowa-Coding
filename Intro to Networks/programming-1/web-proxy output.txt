@@ -1,0 +1,35 @@
+PS C:\Users\mrtgu\OneDrive\Desktop\programming-1> python .\web-proxy.py
+Ready to serve...
+request method: GET, requested URL: http://info.cern.ch/ -> domain: info.cern.ch, path: index.html
+file was NOT found in the local cache at the proxy
+requesting from server...
+GET http://info.cern.ch/ HTTP/1.1
+Host: info.cern.ch
+Connection: close
+
+
+R: b'HTTP/1.1 200 OK\r\nDate: Fri, 24 Mar 2023 19:37:23 GMT\r\nServer: Apache\r\nLast-Modified: Wed, 05 Feb 2014 16:00:31 GMT\r\nETag: "286-4f1aadb3105c0"\r\nAccept-Ranges: bytes\r\nContent-Length: 646\r\nConnection: close\r\nContent-Type: text/html\r\n\r\n<html><head></head><body><header>\n<title>http://info.cern.ch</title>\n</header>\n\n<h1>http://info.cern.ch - home of the first website</h1>\n<p>From here you can:</p>\n<ul>\n<li><a href="http://info.cern.ch/hypertext/WWW/TheProject.html">Browse the first website</a></li>\n<li><a href="http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html">Browse the first website using the line-mode browser simulator</a></li>\n<li><a href="http://home.web.cern.ch/topics/birth-web">Learn about the birth of the web</a></li>\n<li><a href="http://home.web.cern.ch/about">Learn about CERN, the physics laboratory where the web was born</a></li>\n</ul>\n</body></html>\n'
+data sent
+
+
+
+PS C:\Users\mrtgu\OneDrive\Desktop\programming-1> python web-proxy.py            
+Ready to serve...
+request method: GET, requested URL: http://info.cern.ch/ -> domain: info.cern.ch, path: index.html
+file was found in the local cache at the proxy
+data sent
+
+
+
+PS C:\Users\mrtgu\OneDrive\Desktop\programming-1> python web-proxy.py
+Ready to serve...
+request method: GET, requested URL: http://info.cern.ch/cs3640 -> domain: info.cern.ch, path: cs3640
+file was NOT found in the local cache at the proxy
+requesting from server...
+GET http://info.cern.ch/cs3640 HTTP/1.1
+Host: info.cern.ch
+Connection: close
+
+
+R: b'HTTP/1.1 404 Not Found\r\nDate: Fri, 24 Mar 2023 19:38:54 GMT\r\nServer: Apache\r\nContent-Length: 204\r\nConnection: close\r\nContent-Type: text/html; charset=iso-8859-1\r\n\r\n<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL /cs3640 was not found on this server.</p>\n</body></html>\n'
+data sent
