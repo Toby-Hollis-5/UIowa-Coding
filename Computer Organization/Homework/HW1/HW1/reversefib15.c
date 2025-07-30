@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+// Finds the first 15 fibonacci numbers and prints them in reverse order
+void reverseFibonacci15() {
+	int fib[15];
+	
+	fib[0] = 0;
+	fib[1] = 1;
+	
+	//fill out fib array
+	for (int i = 2; i<15; i++) {
+		fib[i] = fib[i-2] + fib[i-1];
+	}
+	
+	//reverse
+	int start = 0;
+	int end = 14;
+	while (start < end) {
+		int temp = fib[start];
+		fib[start] = fib[end];
+		fib[end] = temp;
+		start++;
+		end--;
+	}
+	
+	//print array
+	for (int i = 0; i<15; i++) {
+		printf("%d\n", fib[i]);
+	}
+}
+
+int main() {
+	reverseFibonacci15();
+	return 0;
+}
